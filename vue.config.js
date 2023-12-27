@@ -17,7 +17,7 @@ try {
 
 module.exports = {
   lintOnSave: true,
-  publicPath: `/`,  // 基本路径, 建议以绝对路径跟随访问目录
+  publicPath: `./`,  // 基本路径, 建议以绝对路径跟随访问目录
   configureWebpack: (config) => {
     config.module.rules.push({
       test: /\.(txt|md)$/i,
