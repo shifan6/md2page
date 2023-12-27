@@ -1,6 +1,6 @@
 {
-  "name": "page-sharer",
-  "version": "1.6.0",
+  "name": "ma2page",
+  "version": "1.0.0",
   "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
