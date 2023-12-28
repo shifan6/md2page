@@ -108,8 +108,9 @@
 <script>
 import { mapState, mapActions } from 'pinia'
 import { useStore } from '@/stores'
+import html2canvas from "html2canvas"
+import { Loading } from 'element-ui';
 
-import { setFontSize, setColorWithCustomTemplate } from '@/assets/scripts/util'
 import { solveWeChatImage, mergeCss } from '@/assets/scripts/converter'
 import DEFAULT_CSS_CONTENT from '@/assets/example/theme-css.txt'
 import config from '@/assets/scripts/config'
@@ -195,7 +196,28 @@ export default {
 
     // 分享图片
     share() {
-      this.$message.info('此功能开发中')
+      try {
+        // 生成图片URL
+        let loadingInstance = Loading.service({ fullscreen: true, text: '图片生成中...' })
+        const element = document.querySelector('#output-wrapper .preview')
+        html2canvas(element, {
+          allowTaint: true,
+          useCORS: true,
+          scale: 3,
+          imageTimeout: 0,
+        }).then(canvas => {
+          const dataUrl = canvas.toDataURL()
+          const link = document.createElement('a')
+          const date = new Date()
+          const fileName = 'page-' + date.getFullYear() + (date.getMonth() + 1) + date.getDate() + '.png'
+          link.download = fileName
+          link.href = dataUrl
+          link.click()
+          loadingInstance.close()
+        })
+      } catch (e) {
+        throw new Error(e)
+      }
     },
 
     // 复制到微信公众号
