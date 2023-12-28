@@ -143,7 +143,7 @@ export const useStore = defineStore(`store`, {
         for (let it in wrapper) {
           style += `${it}: ${wrapper[it]}; `
         }
-        output = `<div style="${style}">${output}</div>`
+        output = `<section style="${style}">${output}</section><p><br/></p>`
       }
 
       this.output = output

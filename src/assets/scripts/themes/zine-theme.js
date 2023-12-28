@@ -6,9 +6,10 @@ let primaryColor = `rgb(0, 152, 116, 0.9)`
 export default {
   wrapper: {
     'font-size': `15px`,
-    'margin': `-20px`,
     'padding': `30px`,
-    background: `url(https://raw.githubusercontent.com/shifan6/resource/master/2023/12/27/1703662645913-f51380ae-762f-47a6-9c9c-0a890961e53f.jpg) 0 0 repeat`,
+    'background-image': `url(https://raw.githubusercontent.com/shifan6/resource/master/2023/12/27/1703662645913-f51380ae-762f-47a6-9c9c-0a890961e53f.jpg)`,
+    'background-position': `0 0`,
+    'background-repeat': `repeat`,
     'background-size': `552px 552px`,
   },
   BASE: {
@@ -23,7 +24,7 @@ export default {
       'text-align': `center`,
       'font-weight': `bold`,
       display: `table`,
-      margin: `2em auto 1em`,
+      margin: `0 auto 1em`,
       padding: `1em 1em 0 1em`,
       color: baseColor,
     },

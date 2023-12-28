@@ -203,7 +203,7 @@ export default {
         html2canvas(element, {
           allowTaint: true,
           useCORS: true,
-          scale: 3,
+          scale: 2,
           imageTimeout: 0,
         }).then(canvas => {
           const dataUrl = canvas.toDataURL()
@@ -228,7 +228,6 @@ export default {
 
         const clipboardDiv = document.getElementById(`output`)
         clipboardDiv.innerHTML = mergeCss(clipboardDiv.innerHTML)
-
 
         // 调整 katex 公式元素为行内标签，目的是兼容微信公众号渲染
         clipboardDiv.innerHTML = clipboardDiv.innerHTML

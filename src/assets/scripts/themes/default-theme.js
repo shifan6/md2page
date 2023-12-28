@@ -3,7 +3,8 @@ let primaryColor = `rgba(0, 152, 116, 0.9)`
 
 export default {
   wrapper: {
-    'font-size': `14px`,
+    'font-size': `15px`,
+    'padding': `30px`,
   },
   BASE: {
     'font-family': 'PingFangSC',
@@ -17,7 +18,7 @@ export default {
       'text-align': `center`,
       'font-weight': `bold`,
       display: `table`,
-      margin: `2em auto 1em`,
+      margin: `0 auto 1em`,
       padding: `1em 1em 0 1em`,
       color: baseColor,
     },
