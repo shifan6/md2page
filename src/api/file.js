@@ -305,7 +305,7 @@ async function formCustomUpload(content, file) {
 
 function fileUpload(content, file) {
   const imgHost = localStorage.getItem(`imgHost`)
-  !imgHost && localStorage.setItem(`imgHost`, `default`)
+  !imgHost && localStorage.setItem(`imgHost`, `github`)
   switch (imgHost) {
     case `aliOSS`:
       return aliOSSFileUpload(content, file.name)

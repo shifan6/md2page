@@ -109,7 +109,7 @@ export default {
   methods: {
     changeImgHost() {
       localStorage.setItem(`imgHost`, this.imgHost)
-      this.$message.success(`已成功切换图床`)
+      // this.$message.success(`已成功切换图床`)
     },
     saveGitHubConfiguration() {
       if (!(this.formGitHub.repo && this.formGitHub.accessToken)) {
@@ -130,7 +130,7 @@ export default {
       }
       // check image host
       let imgHost = localStorage.getItem(`imgHost`)
-      imgHost = imgHost ? imgHost : `default`
+      imgHost = imgHost ? imgHost : `github`
       localStorage.setItem(`imgHost`, imgHost)
 
       const config = localStorage.getItem(`${imgHost}Config`)
@@ -164,7 +164,9 @@ export default {
       },
     },
   },
-  mounted() {},
+  mounted() {
+    this.changeImgHost()
+  },
 }
 </script>
 

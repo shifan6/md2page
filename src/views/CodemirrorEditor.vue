@@ -319,7 +319,7 @@ export default {
 
       // check image host
       let imgHost = localStorage.getItem(`imgHost`)
-      imgHost = imgHost ? imgHost : `default`
+      imgHost = imgHost ? imgHost : `github`
       localStorage.setItem(`imgHost`, imgHost)
 
       const config = localStorage.getItem(`${imgHost}Config`)
