@@ -79,17 +79,20 @@ export default {
       display: `block`,
     },
     code_pre: {
-      'font-size': `14px`,
+      'font-family': 'monospace',
+      'font-size': `13px`,
       'overflow-x': `auto`,
       'border-radius': `8px`,
-      padding: `1em`,
-      'line-height': `1.5`,
+      padding: `2em 1em`,
+      'line-height': `1`,
+      background: `#f7f7f7`,
       margin: `10px 8px`,
+      color: '#3f3f3f'
     },
     code: {
       margin: 0,
       'white-space': `nowrap`,
-      'font-family': `Menlo, Operator Mono, Consolas, Monaco, monospace`,
+      'font-family': `monospace, Menlo, Operator Mono, Consolas, Monaco`,
     },
 
     image: {

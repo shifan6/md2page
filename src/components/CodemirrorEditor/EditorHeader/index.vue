@@ -281,10 +281,11 @@ export default {
     // 重置样式
     confirmReset() {
       this.showResetConfirm = false
-      localStorage.clear()
+      localStorage.removeItem('__css_content')
+      localStorage.removeItem('pageTheme')
       this.cssEditor.setValue(DEFAULT_CSS_CONTENT)
-      this.citeStatus = false
-      this.statusChanged(false)
+      // this.citeStatus = false
+      // this.statusChanged(false)
       this.pageThemeChanged(this.config.pageThemes[0].value)
       this.$emit(`cssChanged`)
     },
